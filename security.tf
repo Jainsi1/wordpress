@@ -38,6 +38,22 @@ resource "aws_security_group" "wp_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  
+  ingress {
+    description = "influxdb"
+    from_port   = 8086
+    to_port     = 8806
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "grafana"
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   tags = {
     Name = "wordpress_sg"
