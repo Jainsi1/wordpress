@@ -1,6 +1,7 @@
 resource "aws_launch_configuration" "press" {
   name_prefix                 = "word"
   image_id                    = "ami-0a0c73289afc98cb4"
+  key_name                    = "key1"
   instance_type               = "t2.micro"
   security_groups             = [aws_security_group.wp_sg.id]
   associate_public_ip_address = true
