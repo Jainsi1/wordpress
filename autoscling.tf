@@ -1,6 +1,6 @@
 resource "aws_launch_configuration" "press" {
   name_prefix                 = "word"
-  image_id                    = "ami-0afe188fb348e3b39"
+  image_id                    = "ami-0cfdc93e5e66d6074"
   instance_type               = "t2.medium"
   key_name                    = "key1"
   security_groups             = [aws_security_group.wp_sg.id]
