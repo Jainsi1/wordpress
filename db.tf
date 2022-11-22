@@ -20,7 +20,7 @@ resource "aws_db_instance" "wordpressdb" {
 }
 
 resource "aws_db_subnet_group" "default" {
-  name       = "main"
+  name       = "main1"
   subnet_ids = [aws_subnet.privatesubnet1.id, aws_subnet.privatesubnet2.id]
 
   tags = {
